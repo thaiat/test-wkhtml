@@ -1,7 +1,11 @@
 {
   "name": "test-wkhtml",
   "version": "1.0.0",
-  "description": "",
+  "description": "A test script for installing wkhtmltopdf",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaiat/test-wkhtml.git"
+  },
   "main": "index.js",
   "scripts": {
     "postinstall": "which wkhtmltopdf || bin-wkhtmltopdf",
@@ -15,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bin-wkhtmltopdf": "^1.0.6",
+    "bin-wkhtmltopdf": "Yoobic/wkhtmltopdf",
     "wkhtmltopdf": "^0.3.3"
   },
   "devDependencies": {
