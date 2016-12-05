@@ -1,0 +1,32 @@
+{
+  "name": "test-wkhtml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "which wkhtmltopdf || bin-wkhtmltopdf",
+    "test": "npm run mocha:simple",
+    "mocha": "istanbul cover --root . --include-all-sources  -x **/coverage/**  -x **/files/**  -x **/node_modules/** --dir ./coverage/mocha --report text --report text-summary --report lcov --print none  _mocha -- test/mocha/**/*.spec.js --reporter spec --timeout 10000",
+    "mocha:simple": "mocha test/mocha/**/*.spec.js --reporter spec  --timeout 10000",
+    "mocha:simple:debug": "mocha test/mocha/**/*.spec.js --reporter spec  --timeout 10000 --debug-brk=5858",
+    "mocha:watch": "mocha test/mocha/**/*.spec.js -R nyan -w --timeout 10000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bin-wkhtmltopdf": "^1.0.6",
+    "wkhtmltopdf": "^0.3.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-fs": "^1.0.0",
+    "eslint": "^3.11.1",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-nodeca": "^1.0.3",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
+  }
+}
