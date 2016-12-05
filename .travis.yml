@@ -8,3 +8,5 @@ cache:
      - node_modules
      - bower_components
 
+before_script:
+  - export PATH=$PATH:$PWD/wkhtmltox/bin
