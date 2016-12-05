@@ -15,6 +15,7 @@ describe('Test wkhtmltopdf', () => {
         var output = fs.createWriteStream(filePath);
         output.on('finish', function () {
             expect(filePath).to.be.a.file();
+            expect(fs.statSync(filePath).size).to.be.greaterThan(0);
             done();
         });
 
